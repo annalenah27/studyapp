@@ -1,0 +1,201 @@
+/* Base styles */
+body {
+    font-family: 'Outfit', sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  header {
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+  
+  header button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Dropdown */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    margin-top: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu div {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown-menu div:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-menu div:hover {
+    background: #f0f0f0;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  /* Hidden class */
+  .hidden {
+    display: none;
+  }
+  
+  /* Add Subject */
+  .add-subject {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .add-subject input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+  }
+  
+  .create-subject-btn {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  textarea {
+    resize: vertical;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+  }
+  
+  .save-btn {
+    background-color: #6366f1;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+  
+  /* Notes */
+  .note {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .note-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 9999;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    bottom: 50px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  
+  /* Dark mode */
+  .dark-mode {
+    background: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  .dark-mode .dropdown-toggle, 
+  .dark-mode .dropdown-menu, 
+  .dark-mode textarea,
+  .dark-mode .save-btn,
+  .dark-mode .create-subject-btn {
+    background: #2c2c2c;
+    color: #f0f0f0;
+    border: 1px solid #444;
+  }
+  
+  
+  

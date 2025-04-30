@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Helper - Custom Dropdown</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>📝 Your Notes</h1>
+    <button id="toggleThemeBtn" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <main class="container">
+
+    <!-- Custom Dropdown -->
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown()">📚 Select Subject ▾</button>
+      <div id="dropdownMenu" class="dropdown-menu hidden">
+        <!-- Subjects will be added here dynamically -->
+      </div>
+    </div>
+
+    <!-- Add New Subject -->
+    <div class="add-subject">
+      <input type="text" id="newSubjectInput" placeholder="New subject name...">
+      <button class="create-subject-btn" onclick="createSubject()">➕ Add</button>
+    </div>
+
+    <textarea id="noteInput" rows="5" placeholder="Write your note here..."></textarea>
+
+    <button class="save-btn" onclick="addNote()">Save Note ✨</button>
+
+    <div id="notesList"></div>
+
+  </main>
+
+  <footer>
+    Made with 💖 by You
+  </footer>
+
+  <div id="toast" class="toast">Note saved successfully! 🎉</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
